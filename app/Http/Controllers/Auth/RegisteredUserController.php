@@ -20,6 +20,8 @@ class RegisteredUserController extends Controller
      */
     public function create(): Response
     {
+        abort(403);
+        // The following line will never be reached due to the abort
         return Inertia::render('auth/register');
     }
 
@@ -30,6 +32,8 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        abort(403);
+        // The following code will never be reached due to the abort
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|lowercase|email|max:255|unique:'.User::class,
