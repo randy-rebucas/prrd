@@ -26,7 +26,7 @@ export default function Register() {
 
     const submit: FormEventHandler = (e) => {
         e.preventDefault();
-        post(route('register'), {
+        post(route('prrd-register'), {
             onFinish: () => reset('password', 'password_confirmation'),
         });
     };
@@ -109,7 +109,7 @@ export default function Register() {
 
                 <div className="text-muted-foreground text-center text-sm">
                     Already have an account?{' '}
-                    <TextLink href={route('login')} tabIndex={6}>
+                    <TextLink href={route('prrd-login')} tabIndex={6}>
                         Log in
                     </TextLink>
                 </div>
